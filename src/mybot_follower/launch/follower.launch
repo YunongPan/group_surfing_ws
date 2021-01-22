@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<launch>
+  <node pkg="mybot_follower" name="people_to_tracked_person" type="people_to_tracked_persons.py"/>
+  <include file="$(find mybot_follower)/launch/mybot_group_tracking.launch"/>
+  <node pkg="mybot_follower" name="tracked_persons_filter" type="tracked_persons_filter.py"/>
+  <node pkg="mybot_follower" name="mybot_people_tf_broadcaster" type="mybot_people_tf_broadcaster.py"/>
+  <node pkg="mybot_follower" name="mybot_follower" type="mybot_follower.py"/>
+    
+  
+
+</launch>

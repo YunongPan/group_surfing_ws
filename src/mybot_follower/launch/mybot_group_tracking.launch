@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+  <group ns="/spencer/perception_internal/group_tracking">
+    <remap from="/spencer/perception/tracked_persons" to="/tracked_persons"/>
+    <node name="spatial_relations" type="spatial_relations" pkg="spencer_social_relations">
+      <remap from="/spencer/perception/spatial_relations" to="/spencer/perception/social_relations"/>
+    </node>
+    <node name="group_tracking" type="tracked_groups.py" pkg="spencer_group_tracking">
+      <param name="publish_single_person_groups" value="true"/>
+    </node>
+  </group>
+</launch>
