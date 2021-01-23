@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-
-<launch>
-  <node pkg="people_mover" name="teleop_twist_keyboard_human" type="teleop_twist_keyboard.py">
-    <remap from="/cmd_vel" to="/cmd_vel_human_right"/>
-  </node>
-</launch>

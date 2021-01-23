@@ -90,7 +90,6 @@
 
 
   <link name="left_wheel">
-    <!--origin xyz="0.1 0.13 0.1" rpy="0 1.5707 1.5707"/-->
     <collision name="collision">
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
@@ -114,7 +113,6 @@
   </link>
 
   <link name="right_wheel">
-    <!--origin xyz="0.1 -0.13 0.1" rpy="0 1.5707 1.5707"/-->
     <collision name="collision">
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
@@ -140,7 +138,6 @@
 
   <joint type="continuous" name="left_wheel_hinge">
     <origin xyz="0 0.15 0" rpy="0 0 0"/>
-    <!--origin xyz="0.1 0.13 0" rpy="0 1.5707 1.5707"/-->
     <child link="left_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -150,7 +147,6 @@
 
   <joint type="continuous" name="right_wheel_hinge">
     <origin xyz="0 -0.15 0" rpy="0 0 0"/>
-    <!--origin xyz="0.1 -0.13 0" rpy="0 1.5707 1.5707"/-->
     <child link="right_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>

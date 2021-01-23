@@ -10,8 +10,6 @@ import numpy
 from nav_msgs.msg import Odometry
 from spencer_tracking_msgs.msg import TrackedPersons
 
-
-
 class MySubscriber(object):
   def __init__(self):
     self.goal_x = 40.0
@@ -36,19 +34,14 @@ class MySubscriber(object):
     self.br = tf.TransformBroadcaster()
 
     rospy.Subscriber("/odom", Odometry, self.odom_callback, queue_size=1)
-    rospy.Subscriber("/tracked_persons_filtered", TrackedPersons, self.people_callback, queue_size=1) 
-
-    
-
+    rospy.Subscriber("/tracked_persons_filtered", TrackedPersons, self.people_callback, queue_size=1)   
 
   def odom_callback(self,msg):
     self.odom_position_x = msg.pose.pose.position.x
     self.odom_position_y = msg.pose.pose.position.y
     self.odom_direction_x = self.goal_x - self.odom_position_x
     self.odom_direction_y = self.goal_y - self.odom_position_y
-    self.odom_direction_abs = math.sqrt(self.odom_direction_x ** 2 + self.odom_direction_y ** 2)
-    
-
+    self.odom_direction_abs = math.sqrt(self.odom_direction_x ** 2 + self.odom_direction_y ** 2)   
 
   def people_callback(self,msg):
     people_number = len(msg.tracks)
@@ -72,14 +65,11 @@ class MySubscriber(object):
           self.angle = math.acos(self.people_velocity_dot_product / (self.odom_direction_abs * self.people_velocity_abs))
           angle_all[i] = self.angle
         else: 
-          angle_all[i] = 4 # The directions of people who do not move, move too fast or move behind the robot are set to 4 rad.
-
+          angle_all[i] = 4 # The directions of people who do not move, move too fast or move behind the robot are set to 4 rad to exclude them.
 
       # The angle between the moving direction of the human and the direction of the line connecting
-      # the robot to the target point must not be greater than 30 degrees+-30 Grad. 
-      # Exclude people who do not move towards the goal.
-      # Then choose the fastest people.      
-
+      # the robot to the target point must not be greater than 30 Grad. (It depends on self.max_direction_difference.)
+      # Set the directions of people, who do not move towards the goal, to 4 rad to exclude them. Then choose the fastest people.     
 
       same_direction_index = numpy.where(angle_all < self.max_direction_difference)
       same_direction_index_list = same_direction_index[0].tolist()
@@ -93,36 +83,22 @@ class MySubscriber(object):
 		         rospy.Time.now(),
 		         self.people_name,
 		         "odom")
-
-        print "not empty"
-      else:
-        print "is empty"
+        
+      else:        
         self.br.sendTransform((self.odom_position_x, self.odom_position_y, 0), 
 	  	         tf.transformations.quaternion_from_euler(0, 0, 0),
 		         rospy.Time.now(),
 		         self.people_name,
 		         "odom")
 
-
-
     else:
-      pass
-
-  
+      pass  
 
   def loop(self):
-    rospy.logwarn("Starting Loop...")
     rospy.spin()
 
 if __name__ == '__main__':
-    rospy.init_node('mybot_people_tf_broadcaster')
-    
+    rospy.init_node('mybot_people_tf_broadcaster')    
     my_subs = MySubscriber()
     my_subs.loop()
-
-
-
-
-
-
 

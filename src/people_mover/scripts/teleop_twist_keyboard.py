@@ -14,38 +14,28 @@ import sys, select, termios, tty
 msg = """
 Reading from the keyboard  and Publishing to Twist!
 ---------------------------
-Moving around:
-   u    i    o
-   j    k    l
-   m    ,    .
+For translation:
+   t    z    u
+   g    h    j
+   b    n    m
 
-For Holonomic mode (strafing), hold down the shift key:
----------------------------
-   U    I    O
-   J    K    L
-   M    <    >
-
-t : up (+z)
-b : down (-z)
+Moving around, hold down the shift key:
+        Z     
+   G    H    J
+        N     
 
 anything else : stop
 
-q/z : increase/decrease max speeds by 10%
-w/x : increase/decrease only linear speed by 10%
-e/c : increase/decrease only angular speed by 10%
+5/6 : increase/decrease max speeds by 10%
 
 CTRL-C to quit
 """
 
 moveBindings = {
         'Z':(1,0,0,0),
-        #'e':(1,0,0,-1),
         'G':(0,0,0,1),
         'J':(0,0,0,-1),
-        #'q':(1,0,0,1),
         'N':(-1,0,0,0),
-        #'c':(-1,0,0,1),
-        #'y':(-1,0,0,-1),
         'u':(1,-1,0,0),
         'z':(1,0,0,0),
         'g':(0,1,0,0),
@@ -54,17 +44,11 @@ moveBindings = {
         'n':(-1,0,0,0),
         'm':(-1,-1,0,0),
         'b':(-1,1,0,0),
-        #'5':(0,0,1,0),
-        #'6':(0,0,-1,0),
     }
 
 speedBindings={
         '6':(1.1,1.1),
         '5':(.9,.9),
-        #'5':(1.1,1),
-        #'6':(.9,1),
-        #'7':(1,1.1),
-        #'8':(1,.9),
     }
 
 class PublishThread(threading.Thread):

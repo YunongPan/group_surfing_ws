@@ -7,8 +7,8 @@
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
-  
-  
+
+  <!-- Start simulation in gazebo-->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find mybot_gazebo)/worlds/turtlebot_demo.world"/>
     <arg name="paused" value="$(arg paused)"/>
@@ -18,23 +18,25 @@
     <arg name="debug" value="$(arg debug)"/>
   </include>
 
-  
+  <!-- Load and spawn the robot model. -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find mybot_description)/urdf/mybot.xacro'"/>
-
   <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
    args="-urdf -param robot_description -model mybot" />
-
   
-  <include file="$(find people_mover)/launch/start_teleop.launch"/>
+  <!-- Start the keyboard control node to control the movement of the two human models on the right.-->
+  <node pkg="people_mover" name="teleop_twist_keyboard_human" type="teleop_twist_keyboard.py" output="screen">
+    <remap from="/cmd_vel" to="/cmd_vel_human_right"/>
+  </node>
 
   <!-- send fake joint values. -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="False"/>
   </node>
+
   <!-- Combine joint values -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
-
   
+  <!-- Start Group-Surfing. -->
   <include file="$(find mybot_follower)/launch/follower.launch"/>
 
 </launch>

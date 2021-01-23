@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <launch>
+
+  <!-- This node will be used to convert the /people topic, which is 
+  published by the open source leg tracker (people_velocity_tracker), 
+  into the /tracked_persons topic, so that in the next it can be used 
+  in the people and group tracking pipelines from the SPENCER-Project. 
+  These two topics have different message structures. If you want to 
+  use a different people tracker, you can modify this node to convert 
+  your topic into the /tracked_persons topic so that it can be used in 
+  the same pipelines from the SPENCER-Project. -->
   <node pkg="mybot_follower" name="people_to_tracked_person" type="people_to_tracked_persons.py"/>
-  <include file="$(find mybot_follower)/launch/mybot_group_tracking.launch"/>
-  <node pkg="mybot_follower" name="tracked_persons_filter" type="tracked_persons_filter.py"/>
-  <node pkg="mybot_follower" name="mybot_people_tf_broadcaster" type="mybot_people_tf_broadcaster.py"/>
-  <node pkg="mybot_follower" name="mybot_follower" type="mybot_follower.py"/>
-    
   
+  <!-- Start the nodes from SPENCER-Project to get spatial relations between people and start group tracking-->
+  <include file="$(find mybot_follower)/launch/mybot_group_tracking.launch"/>
+
+  <!-- The person closest to the robot in each group will be kept. -->
+  <node pkg="mybot_follower" name="tracked_persons_filter" type="tracked_persons_filter.py"/>
+
+  <!-- Find the most suitable group and broadcast the position of the person closest to the robot in this group. -->
+  <node pkg="mybot_follower" name="mybot_people_tf_broadcaster" type="mybot_people_tf_broadcaster.py"/>
+
+  <!-- Move the robot to this position. -->
+  <node pkg="mybot_follower" name="mybot_follower" type="mybot_follower.py"/>
 
 </launch>

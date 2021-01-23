@@ -21,12 +21,6 @@
     />
   </macro>
 
-
-
-
-
-
-
   <macro name="wheel" params="lr tY">
 
     <link name="${lr}_wheel">
@@ -61,7 +55,6 @@
       <material>Gazebo/Black</material>
     </gazebo>
 
-
     <joint name="${lr}_wheel_hinge" type="continuous">
       <parent link="chassis"/>
       <child link="${lr}_wheel"/>
@@ -84,9 +77,5 @@
     </transmission>
 
   </macro-->
-
-
-
-
 
 </robot>

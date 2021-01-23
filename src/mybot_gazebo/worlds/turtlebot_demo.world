@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <sdf version='1.6'>
   <world name='default'>
     <light name='sun' type='directional'>
@@ -82,7 +83,6 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-
 
     <model name='human_male_1'>
       <link name='link_0'>
@@ -444,29 +444,6 @@
           <cast_shadows>1</cast_shadows>
           <transparency>0</transparency>
         </visual>
-        <!--<collision name='collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://human_male_1/meshes/shoes.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>-->
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -524,8 +501,6 @@
       <pose frame=''>2.42247 -0.483141 0 0 -0 0</pose>
       <plugin name="plannar_mover_plugin_right" filename="libplannar_mover_plugin_right.so"/>
     </model>
-
-
 
     <model name='human_male_1_clone'>
       <link name='link_0'>
@@ -888,29 +863,6 @@
           <cast_shadows>1</cast_shadows>
           <transparency>0</transparency>
         </visual>
-        <!--<collision name='collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://human_male_1/meshes/shoes.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>-->
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -968,7 +920,6 @@
       <pose frame=''>1.40542 -1.69799 0 0 -0 1.3154</pose>
       <plugin name="plannar_mover_plugin_right" filename="libplannar_mover_plugin_right.so"/>
     </model>
-
 
     <model name='human_male_1_clone_0'>
       <link name='link_0'>
@@ -1331,29 +1282,6 @@
           <cast_shadows>1</cast_shadows>
           <transparency>0</transparency>
         </visual>
-        <!--<collision name='collision'>
-          <laser_retro>0</laser_retro>
-          <max_contacts>10</max_contacts>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <geometry>
-            <mesh>
-              <uri>model://human_male_1/meshes/shoes.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>-->
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
@@ -1413,9 +1341,6 @@
     </model>
 
     <state world_name='default'>
-      <!--<sim_time>213 159000000</sim_time>
-      <real_time>214 666167787</real_time>
-      <wall_time>1610508957 361072227</wall_time>-->
       <iterations>213159</iterations>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
