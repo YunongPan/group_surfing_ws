@@ -18,8 +18,16 @@
   <!-- The person closest to the robot in each group will be kept. -->
   <node pkg="mybot_follower" name="tracked_persons_filter" type="tracked_persons_filter.py"/>
 
-  <!-- Find the most suitable group and broadcast the position of the person closest to the robot in this group. -->
-  <node pkg="mybot_follower" name="mybot_people_tf_broadcaster" type="mybot_people_tf_broadcaster.py"/>
+  <!-- Find the most suitable group and broadcast the position of the person closest to the robot in this group. 
+  Set the location of the destination, the maximum moving speed of the robot, and the maximum angle difference here.-->
+  <node pkg="mybot_follower" name="mybot_people_tf_broadcaster" type="mybot_people_tf_broadcaster.py">
+    <param name="goal_x" value="40.0"/> 
+    <param name="goal_y" value="0.0"/>
+    <param name="max_robot_velocity" value="2.0"/>
+    <param name="max_direction_difference" value="0.5236"/> <!-- The angle between the moving direction of the human 
+							    and the direction of the line connecting the robot to the 
+							    goal must not be greater than this value. -->  
+  </node>
 
   <!-- Move the robot to this position. -->
   <node pkg="mybot_follower" name="mybot_follower" type="mybot_follower.py"/>

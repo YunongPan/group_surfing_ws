@@ -4,31 +4,38 @@ import rospy
 import time
 from geometry_msgs.msg import Twist
 
-def human_velocity_publisher():
-  rospy.init_node('human_velocity_publisher')
-  human_velocity_pub = rospy.Publisher('/cmd_vel_human', Twist, queue_size=10)
-  
-  vel_msg =Twist()
-  vel_msg.linear.x = 0.5
+velocity_x = rospy.get_param('/human_velocity_publisher/human_left_velocity_x')
+velocity_y = rospy.get_param('/human_velocity_publisher/human_left_velocity_y')
 
-  rate=rospy.Rate(1)
+class human_velocity_publisher():
+  def __init__(self):
+    self.human_velocity_pub = rospy.Publisher('/cmd_vel_human', Twist, queue_size=10)
+    self.vel_msg = Twist()
+    self.ctrl_c = False
+    self.rate = rospy.Rate(10)
+    rospy.on_shutdown(self.shutdownhook)
 
+  def publish_vel_msg(self):
+    while not self.ctrl_c:
+      self.human_velocity_pub.publish(self.vel_msg)
+      self.rate.sleep()
+        
+  def shutdownhook(self):    
+    self.human_velocity_pub.publish(Twist())
+    rospy.sleep(1)
+    self.ctrl_c = True
 
-
-  while not rospy.is_shutdown():
-    
-    
-    human_velocity_pub.publish(vel_msg)
-    vel_msg.linear.x += 0.01
-    rate.sleep()
-  
-
-
-
+  def get_velocity(self):       
+    self.vel_msg.linear.x = velocity_x
+    self.vel_msg.linear.y = velocity_y
+    self.publish_vel_msg()
 
 if __name__=='__main__':
-  time.sleep(10)
+  time.sleep(1)
+  rospy.init_node('human_velocity_publisher')
+  human_velocity_publisher_object = human_velocity_publisher()
   try:
-    human_velocity_publisher()
+    human_velocity_publisher_object.get_velocity()
   except rospy.ROSInterruptException:
     pass
+

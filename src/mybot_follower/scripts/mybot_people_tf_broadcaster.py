@@ -12,10 +12,12 @@ from spencer_tracking_msgs.msg import TrackedPersons
 
 class MySubscriber(object):
   def __init__(self):
-    self.goal_x = 40.0
-    self.goal_y = 0.0 # Goal position
-    self.max_robot_velocity = 1.0  # The maximum speed of the robot.
-    self.max_direction_difference = 0.5236 # The angle between the being followed person's direction of movement and the direction of the goal cannot greater than this value.
+    self.goal_x = rospy.get_param('/mybot_people_tf_broadcaster/goal_x')
+    self.goal_y = rospy.get_param('/mybot_people_tf_broadcaster/goal_y') # Goal position
+    self.max_robot_velocity = rospy.get_param('/mybot_people_tf_broadcaster/max_robot_velocity') # The maximum speed of the robot.
+    self.max_direction_difference = rospy.get_param('/mybot_people_tf_broadcaster/max_direction_difference') 
+    # The angle between the moving direction of the human and the direction of the line connecting
+    # the robot to the goal must not be greater than this value.
 
     self.odom_position_x = 0.0
     self.odom_position_y = 0.0
@@ -68,9 +70,8 @@ class MySubscriber(object):
           angle_all[i] = 4 # The directions of people who do not move, move too fast or move behind the robot are set to 4 rad to exclude them.
 
       # The angle between the moving direction of the human and the direction of the line connecting
-      # the robot to the target point must not be greater than 30 Grad. (It depends on self.max_direction_difference.)
-      # Set the directions of people, who do not move towards the goal, to 4 rad to exclude them. Then choose the fastest people.     
-
+      # the robot to the goal must not be greater than 30 Grad. (It depends on self.max_direction_difference.)
+      # Set the directions of people, who do not move towards the goal, to 4 rad to exclude them. Then choose the fastest people.
       same_direction_index = numpy.where(angle_all < self.max_direction_difference)
       same_direction_index_list = same_direction_index[0].tolist()
       if same_direction_index_list:
