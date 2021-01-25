@@ -38,19 +38,19 @@ Workshop for group_surfing.
   
 	`./run_gazebo.sh`  
   
-	*Note:* Click on the current terminal and use  
+	*Note: Click on the current terminal and use  
   
-	t	z	u  
-	g	h	j  
-	b	n	m  
+	*t	z	u  
+	*g	h	j  
+	*b	n	m  
   
-	to control the movement of the two human models on the right.  
+	*to control the movement of the two human models on the right.  
   
 3. Start another terminal and launch the open source leg tracker, then group-surfing should be started successfully.
   
 	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
-	*Note:* If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.  
+	*Note: If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.  
   
 3. Start Rviz  
   
