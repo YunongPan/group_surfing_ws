@@ -46,7 +46,9 @@ Workshop for the group-surfing function.
   
 	*Note: Click on the current shell and use*  
   
-<pre>a</pre>
+	`t z u`  
+	`g h j`  
+	`b n m`
   
 	*to control the movement of the two human models on the right.*  
   
