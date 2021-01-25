@@ -38,6 +38,8 @@ Workshop for group_surfing.
   
 `./run_gazebo.sh`  
   
+`roslaunch people_velocity_tracker tracked_detector.launch`  
+  
 3. Start Rviz  
   
 `./run_rviz.sh`
