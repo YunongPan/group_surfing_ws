@@ -40,7 +40,7 @@ Workshop for group_surfing.
   
 	`./run_gazebo.sh`  
   
-	*Note: Click on the current terminal and use*  
+	*Note: Click on the current shell and use*  
   
 	*t	z	u*  
 	*g	h	j*  
@@ -54,6 +54,10 @@ Workshop for group_surfing.
   
 	*Note: If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.*  
   
-3. Start Rviz  
+4. Start Rviz  
   
 	`./run_rviz.sh`
+  
+5. Control the movement of singel human model in the left side  
+  
+	`roslaunch people_mover human_velocity_publisher.launch`  
