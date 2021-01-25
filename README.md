@@ -76,10 +76,10 @@ Workshop for group_surfing.
   
 ### The following parameters can be set in `follower.launch`.  
 Path: `~/group_surfing_ws/src/mybot_follower/launch/follower.launch`  
-#### /mybot_people_tf_broadcaster/goal_x (default: 40.0 m)
-X coordinate of the goal in odom frame.
-#### /mybot_people_tf_broadcaster/goal_y (default: 0.0 m)
-Y coordinate of the goal in odom frame.	
+- /mybot_people_tf_broadcaster/goal_x (default: 40.0 m)
+  - X coordinate of the goal in odom frame.
+- /mybot_people_tf_broadcaster/goal_y (default: 0.0 m)
+  - Y coordinate of the goal in odom frame.	
 #### /mybot_people_tf_broadcaster/max_direction_difference (default: 0.5236 rad)
 The angle between the moving direction of the human and the direction of the line connecting the robot to the goal must not be greater than this value.
 #### /mybot_people_tf_broadcaster/max_robot_velocity (default: 2.0 m/s)
