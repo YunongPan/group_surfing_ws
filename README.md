@@ -75,8 +75,8 @@ Workshop for group_surfing.
 ## Parameter  
   
 ### The following parameters can be set in `follower.launch`
-Path: `~/group_surfing_ws/src/mybot_follower/launch/follower.launch`  
-#### /mybot_people_tf_broadcaster/goal_x (default: 40.0 m)
+	Path: `~/group_surfing_ws/src/mybot_follower/launch/follower.launch`  
+	#### /mybot_people_tf_broadcaster/goal_x (default: 40.0 m)
 #### /mybot_people_tf_broadcaster/goal_y (default: 0.0 m)
 #### /mybot_people_tf_broadcaster/max_direction_difference (default: 0.5236 rad)
 #### /mybot_people_tf_broadcaster/max_robot_velocity (default: 2.0 m/s)
