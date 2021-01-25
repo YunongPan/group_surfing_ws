@@ -11,9 +11,9 @@ Workshop for group_surfing.
 ## Installation
 1. Clone this repository  
   
-`cd ~`  
+- `cd ~`  
   
-`git clone https://github.com/YunongPan/group_surfing_ws.git`  
+- `git clone https://github.com/YunongPan/group_surfing_ws.git`  
   
 2. Install dependencies  
   
