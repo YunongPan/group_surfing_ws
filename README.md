@@ -84,6 +84,7 @@ Y coordinate of the goal in odom frame.
 The angle between the moving direction of the human and the direction of the line connecting the robot to the goal must not be greater than this value.
 #### /mybot_people_tf_broadcaster/max_robot_velocity (default: 2.0 m/s)
 The maximum moving speed of the robot.
+  
 ### The following parameters can be set in `human_velocity_publisher.launch`
 Path: `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`  
 #### /human_velocity_publisher/human_left_velocity_x (default: 0.7 m/s)
