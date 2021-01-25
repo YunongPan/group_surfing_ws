@@ -58,12 +58,6 @@ Workshop for the group-surfing function.
   
 	*Note: If the leg tracker is launched together in the same launch file in the 3. step, an error will appear.*  
   
-5. Start Rviz  
-  
-	`cd ~/group_surfing_ws`  
-  
-	`./run_rviz.sh`
-  
 6. Control the movement of single human model in the left side  
   
 	`roslaunch people_mover human_velocity_publisher.launch`  
@@ -71,6 +65,13 @@ Workshop for the group-surfing function.
 	*Note: Default velocity: v_x = 0.7 m/s, v_y = 0.0 m/s.*  
 	*You may change the velocity in* `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`  
 	*Press* `ctrl + c` *to stop the movement.*  
+  
+5. Start Rviz  
+  
+	`cd ~/group_surfing_ws`  
+  
+	`./run_rviz.sh`
+  
   
 ![image](https://raw.githubusercontent.com/YunongPan/readme_add_pic/main/group_surfing.png)
 ## Parameter  
