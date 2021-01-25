@@ -56,6 +56,8 @@ Workshop for group_surfing.
   
 4. Start Rviz  
   
+	`cd ~/group_surfing_ws`  
+  
 	`./run_rviz.sh`
   
 5. Control the movement of singel human model in the left side  
