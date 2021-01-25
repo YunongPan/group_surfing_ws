@@ -72,6 +72,7 @@ Workshop for group_surfing.
 	*You may change the velocity in* `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`  
 	*Press* `ctrl + c` *to stop the movement.*  
   
+![image](https://raw.githubusercontent.com/YunongPan/readme_add_pic/main/group_surfing.png)
 ## Parameter  
   
 ### The following parameters can be set in `follower.launch`.  
@@ -99,5 +100,5 @@ Path: `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launc
   - Velocity component (v_y) of the single human model.
 
   
-![image](https://raw.githubusercontent.com/YunongPan/readme_add_pic/main/group_surfing.png)
+
 
