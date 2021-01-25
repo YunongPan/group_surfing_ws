@@ -8,7 +8,7 @@ Workshop for group_surfing.
   - `sudo apt-get install ros-melodic-teleop-twist-keyboard`
 
 ## Installation
-1. Clone this repository
+1. Clone this repository  
 `cd ~/urbant_ws/src`  
 `git clone https://github.com/YunongPan/group_surfing_ws.git`  
 2. Install dependencies  
