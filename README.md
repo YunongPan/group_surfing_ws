@@ -52,7 +52,7 @@ Workshop for group_surfing.
   
 	*to control the movement of the two human models on the right.*  
   
-4. Start another terminal and launch the open source leg tracker, then click back to the terminal of 3. step and try to move the human models. Group-surfing should be started successfully.
+4. Start another terminal and launch the open source leg tracker, then click back to the terminal of 3. step and try to move the human models toward the goal (Default: x = 40.0 m, y = 0.0 m). Group-surfing should be started successfully.
   
 	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
@@ -64,7 +64,7 @@ Workshop for group_surfing.
   
 	`./run_rviz.sh`
   
-6. Control the movement of singel human model in the left side  
+6. Control the movement of single human model in the left side  
   
 	`roslaunch people_mover human_velocity_publisher.launch`  
   
