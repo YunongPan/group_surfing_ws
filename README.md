@@ -81,7 +81,8 @@ Path: `~/group_surfing_ws/src/mybot_follower/launch/follower.launch`
 #### /mybot_people_tf_broadcaster/max_direction_difference (default: 0.5236 rad)
 #### /mybot_people_tf_broadcaster/max_robot_velocity (default: 2.0 m/s)
   
-### human_velocity_publisher.launch
+### The following parameters can be set in `human_velocity_publisher.launch`
+Path: `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`  
 #### /human_velocity_publisher/human_left_velocity_x (default: 0.7 m/s)
 #### /human_velocity_publisher/human_left_velocity_y (default: 0.0 m/s)
 
