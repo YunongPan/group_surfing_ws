@@ -68,4 +68,5 @@ Workshop for group_surfing.
   
 	`roslaunch people_mover human_velocity_publisher.launch`  
   
-	*Note: Default velocity: v_x = 0.5 m/s, v_y = 0.0 m/s. You may change the velocity in* `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`
+	*Note: Default velocity: v_x = 0.5 m/s, v_y = 0.0 m/s.  
+	You may change the velocity in* `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`
