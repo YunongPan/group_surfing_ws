@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 import rospy
-import time
 from geometry_msgs.msg import Twist
 
 velocity_x = rospy.get_param('/human_velocity_publisher/human_left_velocity_x')
@@ -31,7 +30,6 @@ class human_velocity_publisher():
     self.publish_vel_msg()
 
 if __name__=='__main__':
-  time.sleep(1)
   rospy.init_node('human_velocity_publisher')
   human_velocity_publisher_object = human_velocity_publisher()
   try:
