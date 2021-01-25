@@ -56,7 +56,7 @@ Workshop for group_surfing.
   
 	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
-	*Note: If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.*  
+	*Note: If the leg tracker is launched together in the same launch file in the 3. step, an error will appear.*  
   
 5. Start Rviz  
   
