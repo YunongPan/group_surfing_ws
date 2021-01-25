@@ -11,47 +11,47 @@ Workshop for group_surfing.
 ## Installation
 1. Clone this repository  
   
-- `cd ~`  
+	`cd ~`  
   
-- `git clone https://github.com/YunongPan/group_surfing_ws.git`  
+	`git clone https://github.com/YunongPan/group_surfing_ws.git`  
   
 2. Install dependencies  
   
-- `cd ~/group_surfing_ws`  
+	`cd ~/group_surfing_ws`  
   
-- `rosdep install --from-paths src --ignore-src -r -y`  
+	`rosdep install --from-paths src --ignore-src -r -y`  
   
 3. Build the workspace  
   
-- `catkin_make`  
+	`catkin_make`  
 
 ## Testing
 1. Source env setting  
   
-- `source ~/group_surfing_ws/devel/setup.bash`  
+	`source ~/group_surfing_ws/devel/setup.bash`  
   
-- `export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/group_surfing_ws/src/gazebo_plugin/plannar_mover_plugin/build`  
-  
+	`export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/group_surfing_ws/src/gazebo_plugin/plannar_mover_plugin/build`  
+   
 2. Start simulation in gazebo  
   
-- `cd ~/group_surfing_ws`  
+	`cd ~/group_surfing_ws`  
   
-- `./run_gazebo.sh`  
+	`./run_gazebo.sh`  
   
-- Click on the current terminal and use  
+	Click on the current terminal and use  
   
-t     z     u  
-g     h     j  
-b     n     m  
+	t     z     u  
+	g     h     j  
+	b     n     m  
   
-to control the movement of the two human models on the right.  
+	to control the movement of the two human models on the right.  
   
 3. Start another terminal and launch the open source leg tracker, then group-surfing should be started successfully.
   
-- `roslaunch people_velocity_tracker tracked_detector.launch`  
+	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
-- If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.  
+	If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.  
   
 3. Start Rviz  
   
-- `./run_rviz.sh`
+	`./run_rviz.sh`
