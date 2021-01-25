@@ -2,10 +2,10 @@
 Workshop for group_surfing.
 
 ## Requirements
-- python-catkin-tools
+- **python-catkin-tools**
   - `sudo apt-get install python-catkin-tools`  
     
-- teleop_twist_keyboard
+- **teleop_twist_keyboard**
   - `sudo apt-get install ros-melodic-teleop-twist-keyboard`
 
 ## Installation
@@ -93,10 +93,10 @@ Path: `~/group_surfing_ws/src/mybot_follower/launch/follower.launch`
 Path: `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`  
   
 - **/human_velocity_publisher/human_left_velocity_x (default: 0.7 m/s)**
-  - aaaaaa  
+  - Velocity component (v_x) of the single human model.
   
 - **/human_velocity_publisher/human_left_velocity_y (default: 0.0 m/s)**
-  - bbbbb  
+  - Velocity component (v_y) of the single human model.
 
   
 ![image](https://raw.githubusercontent.com/YunongPan/readme_add_pic/main/group_surfing.png)
