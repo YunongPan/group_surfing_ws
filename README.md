@@ -24,3 +24,20 @@ Workshop for group_surfing.
 3. Build the workspace  
   
 `catkin_make`  
+
+## Testing
+1. Source env setting  
+  
+`source ~/group_surfing_ws/devel/setup.bash`  
+  
+`export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/group_surfing_ws/src/gazebo_plugin/plannar_mover_plugin/build`  
+  
+2. Start simulation in gazebo  
+  
+`cd ~/group_surfing_ws`  
+  
+`./run_gazebo.sh`  
+  
+3. Start Rviz  
+  
+`./run_rviz.sh`
