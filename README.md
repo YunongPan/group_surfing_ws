@@ -38,7 +38,7 @@ Workshop for group_surfing.
   
 	`./run_gazebo.sh`  
   
-	Click on the current terminal and use  
+	*Note:* Click on the current terminal and use  
   
 	t	z	u  
 	g	h	j  
@@ -50,7 +50,7 @@ Workshop for group_surfing.
   
 	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
-	If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.  
+	*Note:* If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.  
   
 3. Start Rviz  
   
