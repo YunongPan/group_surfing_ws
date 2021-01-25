@@ -85,7 +85,7 @@ Path: `~/group_surfing_ws/src/mybot_follower/launch/follower.launch`
   - Y coordinate of the goal in odom frame.
   
 - **/mybot_people_tf_broadcaster/max_direction_difference (default: 0.5236 rad)**
-  - The angle between the moving direction of the human and the direction of the line connecting the robot to the goal must not be greater than this value.  
+  - The angle between the moving direction of the be followed human and the direction of the line connecting the robot to the goal must not be greater than this value.  
   
 - **/mybot_people_tf_broadcaster/max_robot_velocity (default: 2.0 m/s)**
   - The maximum moving speed of the robot.
