@@ -5,7 +5,7 @@
   <node pkg="people_mover" name="human_velocity_publisher" type="human_velocity_publisher.py"> 
     
     <!-- Set the speed of model movement here. [m/s] -->
-    <param name="human_left_velocity_x" value="0.5"/> 
+    <param name="human_left_velocity_x" value="0.7"/> 
     <param name="human_left_velocity_y" value="0.0"/>
   </node>
 </launch>
