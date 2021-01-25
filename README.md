@@ -46,12 +46,7 @@ Workshop for the group-surfing function.
   
 	*Note: Click on the current shell and use*  
   
-```text
-#comment
-x = 0
-x = 2 + 2
-what is x
-``` 
+<pre>a<pre>
   
 	*to control the movement of the two human models on the right.*  
   
