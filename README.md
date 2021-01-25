@@ -40,9 +40,9 @@ Workshop for group_surfing.
   
 	Click on the current terminal and use  
   
-	t     z     u  
-	g     h     j  
-	b     n     m  
+	t	z	u  
+	g	h	j  
+	b	n	m  
   
 	to control the movement of the two human models on the right.  
   
