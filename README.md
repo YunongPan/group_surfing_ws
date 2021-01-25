@@ -15,9 +15,11 @@ Workshop for group_surfing.
 `git clone https://github.com/YunongPan/group_surfing_ws.git`  
   
 2. Install dependencies  
+  
 `cd ~/group_surfing_ws`  
   
 `rosdep install --from-paths src --ignore-src -r -y`  
-
-3. Build the workspace
-`catkin_make`
+  
+3. Build the workspace  
+  
+`catkin_make`  
