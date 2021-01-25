@@ -32,7 +32,7 @@ Workshop for group_surfing.
   
 	`export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/group_surfing_ws/src/gazebo_plugin/plannar_mover_plugin/build`  
 	  
-	*Note: This changes the path only for the current shell. If you want to use your plugin for every new temrinal you open, append the line above to the `~/.bashrc` file.*
+	*Note: This changes the path only for the current shell. If you want to use your plugin for every new temrinal you open, append the line above to the* `~/.bashrc` *file.*
    
 2. Start simulation in gazebo  
   
