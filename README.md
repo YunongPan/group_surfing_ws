@@ -42,7 +42,7 @@ Workshop for group_surfing.
   
 Click on the current window and use  
   
-t     z     u  
+t&emspz     u  
 g     h     j  
 b     n     m  
   
