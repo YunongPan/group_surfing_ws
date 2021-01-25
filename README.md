@@ -50,7 +50,7 @@ Workshop for the group-surfing function.
 	`g h j`  
 	`b n m`
   
-	*to control the movement of the two human models on the right.*  
+	*to control the movement of the two human models on the right. If you are using an English keyboard, please pay attention to the position of z button.*  
   
 4. Open another terminal and launch the open source leg tracker, then click back to the terminal of 3. step and try to move the human models toward the goal (default: x = 40.0 m, y = 0.0 m). Group-surfing should be started successfully.
   
