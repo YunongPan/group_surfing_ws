@@ -33,8 +33,12 @@ Workshop for group_surfing.
 	`export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/group_surfing_ws/src/gazebo_plugin/plannar_mover_plugin/build`  
 	  
 	*Note: This changes the path only for the current shell. If you want to use your plugin for every new temrinal you open, append the line above to the* `~/.bashrc` *file.*
+  
+2. Copy human model  
+  
+	Open `~/wzl_projekt/src/gazebo_model`. Copy `human_male_1` folder into `~/.gazebo/models`.  
    
-2. Start simulation in gazebo  
+3. Start simulation in gazebo  
   
 	`cd ~/group_surfing_ws`  
   
@@ -48,18 +52,18 @@ Workshop for group_surfing.
   
 	*to control the movement of the two human models on the right.*  
   
-3. Start another terminal and launch the open source leg tracker, then group-surfing should be started successfully.
+4. Start another terminal and launch the open source leg tracker, then group-surfing should be started successfully.
   
 	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
 	*Note: If the leg tracker is launched together in the same launch file in the 2. step, an error will appear.*  
   
-4. Start Rviz  
+5. Start Rviz  
   
 	`cd ~/group_surfing_ws`  
   
 	`./run_rviz.sh`
   
-5. Control the movement of singel human model in the left side  
+6. Control the movement of singel human model in the left side  
   
 	`roslaunch people_mover human_velocity_publisher.launch`  
