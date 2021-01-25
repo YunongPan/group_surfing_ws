@@ -46,7 +46,7 @@ Workshop for the group-surfing function.
   
 	*Note: Click on the current shell and use*  
   
-	`t	z	u`  
+	`t `` &nbsp; &nbsp;`` z	u`  
 	`g	h	j`  
 	`b	n	m`  
   
