@@ -41,10 +41,9 @@ Workshop for group_surfing.
 `roslaunch people_velocity_tracker tracked_detector.launch`  
   
 Click on the current window and use  
-  
-t z u  
-g h j  
-b n m  
+t   z   u  
+g   h   j  
+b   n   m  
   
 to control the movement of the two human models on the right.  
   
