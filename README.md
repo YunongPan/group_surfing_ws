@@ -72,5 +72,13 @@ Workshop for group_surfing.
 	*You may change the velocity in* `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`  
 	*Press* `ctrl + c` *to stop the movement.*  
   
+## Parameter  
+  
+### /mybot_people_tf_broadcaster/goal_x (Default: 40.0 m)
+### /mybot_people_tf_broadcaster/goal_y (Default: 0.0 m)
+### /mybot_people_tf_broadcaster/max_direction_difference (Default: 0.5236 rad)
+### /mybot_people_tf_broadcaster/max_robot_velocity (Default: 2.0 m/s)
+
+  
 ![image](https://raw.githubusercontent.com/YunongPan/readme_add_pic/main/group_surfing.png)
 
