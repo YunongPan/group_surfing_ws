@@ -52,7 +52,7 @@ Workshop for group_surfing.
   
 	*to control the movement of the two human models on the right.*  
   
-4. Start another terminal and launch the open source leg tracker, then click back to the terminal of 3. step and try to move the human models toward the goal (Default: x = 40.0 m, y = 0.0 m). Group-surfing should be started successfully.
+4. Start another terminal and launch the open source leg tracker, then click back to the terminal of 3. step and try to move the human models toward the goal (default: x = 40.0 m, y = 0.0 m). Group-surfing should be started successfully.
   
 	`roslaunch people_velocity_tracker tracked_detector.launch`  
   
@@ -75,10 +75,14 @@ Workshop for group_surfing.
 ## Parameter  
   
 ### follower.launch
-#### /mybot_people_tf_broadcaster/goal_x (Default: 40.0 m)
-#### /mybot_people_tf_broadcaster/goal_y (Default: 0.0 m)
-#### /mybot_people_tf_broadcaster/max_direction_difference (Default: 0.5236 rad)
-#### /mybot_people_tf_broadcaster/max_robot_velocity (Default: 2.0 m/s)
+#### /mybot_people_tf_broadcaster/goal_x (default: 40.0 m)
+#### /mybot_people_tf_broadcaster/goal_y (default: 0.0 m)
+#### /mybot_people_tf_broadcaster/max_direction_difference (default: 0.5236 rad)
+#### /mybot_people_tf_broadcaster/max_robot_velocity (default: 2.0 m/s)
+  
+### human_velocity_publisher.launch
+#### /human_velocity_publisher/human_left_velocity_x (default: 0.7 m/s)
+#### /human_velocity_publisher/human_left_velocity_y (default: 0.0 m/s)
 
   
 ![image](https://raw.githubusercontent.com/YunongPan/readme_add_pic/main/group_surfing.png)
