@@ -1,5 +1,5 @@
 # group_surfing_ws
-Workshop for group_surfing.
+Workshop for the group-surfing function.
 
 ## Requirements
 - **python-catkin-tools**
