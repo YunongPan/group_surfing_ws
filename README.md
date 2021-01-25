@@ -64,6 +64,8 @@ Workshop for group_surfing.
   
 	`./run_rviz.sh`
   
-6. Control the movement of singel human model in the left side. Default velocity: v_x = 0.5 m/s, v_y = 0.0 m/s.
+6. Control the movement of singel human model in the left side  
   
 	`roslaunch people_mover human_velocity_publisher.launch`  
+  
+	*Note: Default velocity: v_x = 0.5 m/s, v_y = 0.0 m/s. You may change the velocity in* `~/group_surfing_ws/src/people_mover/launch/human_velocity_publisher.launch`
