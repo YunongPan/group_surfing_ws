@@ -36,7 +36,7 @@ Workshop for group_surfing.
   
 2. Copy human model  
   
-	Open `~/wzl_projekt/src/gazebo_model`. Copy `human_male_1` folder into `~/.gazebo/models`.  
+	Open `~/group_surfing_ws/src/gazebo_model`. Copy `human_male_1` folder into `~/.gazebo/models`.  
    
 3. Start simulation in gazebo  
   
